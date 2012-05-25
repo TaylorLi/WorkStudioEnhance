@@ -1,0 +1,262 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{055DCFCB-D116-4E05-8662-CF0AB68DC356}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonLibrary</RootNamespace>
+    <AssemblyName>CommonLibrary</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json.Net35, Version=4.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSV\ObjectLoader.cs" />
+    <Compile Include="CSV\CSVAttribute.cs" />
+    <Compile Include="Definition.cs" />
+    <Compile Include="Entities\DateTimePar.cs" />
+    <Compile Include="Entities\LibraryInfos.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Extension\SoapLogs.cs" />
+    <Compile Include="Extension\WcfExtentions\MessageInspector.cs" />
+    <Compile Include="Extension\WcfExtentions\MessageLogBehavior.cs" />
+    <Compile Include="Extension\WcfExtentions\MessageLogBehaviorExtensionElement.cs" />
+    <Compile Include="Extension\WcfExtentions\MessageLogger.cs" />
+    <Compile Include="ObjectBase\ConfigBase.cs" />
+    <Compile Include="ObjectBase\ListBase.cs" />
+    <Compile Include="ObjectBase\SerializationBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Date.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Date.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Files\ResourceBase.cs" />
+    <Compile Include="Resources\Files\ResourceObj.cs" />
+    <Compile Include="Resources\Files\Resources.cs" />
+    <Compile Include="Resources\Files\ResourcesHelper.cs" />
+    <Compile Include="Resources\Paging.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Paging.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\CacheHelper.cs" />
+    <Compile Include="Utility\ConfigHelper.cs" />
+    <Compile Include="Utility\DateHelper.cs" />
+    <Compile Include="Utility\DirectoryHelper.cs" />
+    <Compile Include="Utility\Dynamic\DynamicComparer.cs" />
+    <Compile Include="Utility\Dynamic\SortProperty.cs" />
+    <Compile Include="Utility\EmailHelper.cs" />
+    <Compile Include="Utility\ExcelHelper.cs" />
+    <Compile Include="Utility\FileHelper.cs" />
+    <Compile Include="Utility\GzipHelper.cs" />
+    <Compile Include="Utility\LanguageHelper.cs" />
+    <Compile Include="Utility\ListHelper.cs" />
+    <Compile Include="Utility\LogHelper.cs" />
+    <Compile Include="Utility\MutiLanguage.cs" />
+    <Compile Include="Utility\NumberHelper.cs" />
+    <Compile Include="Utility\RandomHelper.cs" />
+    <Compile Include="Utility\SecretHelper.cs" />
+    <Compile Include="Utility\SerializationHelper.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
+    <Compile Include="Utility\Xml\XmlHelper.cs" />
+    <Compile Include="Utility\Xml\XsltHelper.cs" />
+    <Compile Include="WebObject\AdminTemplatePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\CacheManager.cs" />
+    <Compile Include="WebObject\CacheManagerTemplatePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\VerifyCodeHelper.cs" />
+    <Compile Include="WebObject\ConfigManager.cs" />
+    <Compile Include="WebObject\CookieManager.cs" />
+    <Compile Include="WebObject\CultureHelper.cs" />
+    <Compile Include="WebObject\DataGridHelper.cs" />
+    <Compile Include="WebObject\Entities\Caches.cs" />
+    <Compile Include="WebObject\GridViewHelper.cs" />
+    <Compile Include="WebObject\HtmlHelper.cs" />
+    <Compile Include="WebObject\JavaScriptHelper.cs" />
+    <Compile Include="Utility\RequestHelper.cs" />
+    <Compile Include="WebObject\JsonHelper.cs" />
+    <Compile Include="WebObject\OnlineUserTemplateMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\OnlineUserTemplatePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\Paging.cs" />
+    <Compile Include="WebObject\RdlcDownloadHelper.cs" />
+    <Compile Include="WebObject\SessionHelper.cs" />
+    <Compile Include="WebObject\SimultaneousLogin.cs" />
+    <Compile Include="WebObject\TableHelper.cs" />
+    <Compile Include="WebObject\TemplateCallbackHandler.cs" />
+    <Compile Include="WebObject\TemplateCallbackPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\TemplateControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\TemplateGlobal.cs" />
+    <Compile Include="WebObject\TemplateMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\TemplatePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\ConfigManagerTemplatePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\TemplatePagingControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebObject\WebHelper.cs" />
+    <Compile Include="WebObject\ControlHelper.cs" />
+    <Compile Include="WebObject\OnlineUserManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Date.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Date.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Date.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Date.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Paging.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Paging.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource.zh-cn.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource.zh-tw.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataMapping\DataMapping.csproj">
+      <Project>{9EB017FA-B80B-4863-A550-9A548228B721}</Project>
+      <Name>DataMapping</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files\Resource_Sample.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

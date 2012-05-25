@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+  <Resource>
+    <Key>Welcome</Key>
+    <Value>Welcome to TravelSky insurance trading platform</Value>
+  </Resource>
+  <Resource>
+    <Key>Tag</Key>
+    <Value>Tag</Value>
+  </Resource>
+</Resources>

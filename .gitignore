@@ -4,3 +4,35 @@ obj
 
 # mstest test results
 TestResults
+#//忽略tmp.txt
+tmp.txt         
+#//忽略所有log文件
+*.log           
+#忽略tmp文件夹所有文件
+tmp/*          
+#忽略log目录下的包括子目录下的所有log文件
+/**/log/**/*.log 
+#忽略svn目录
+/**/.svn
+#忽略svn目录
+.svn
+/**/bin
+/**/obj
+*.user
+
+*.o
+*.lo 
+*.la 
+*.al 
+.libs 
+*.so
+*.so.[0-9]* 
+*.a 
+*.pyc 
+*.pyo 
+*.rej 
+*~ 
+#*# 
+.#* 
+.*.swp 
+.DS_Store
