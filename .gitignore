@@ -19,6 +19,7 @@ tmp/*
 /**/bin
 /**/obj
 *.user
+*.suo
 
 *.o
 *.lo 

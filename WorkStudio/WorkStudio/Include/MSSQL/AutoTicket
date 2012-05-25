@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectName>AutoTicket</ProjectName>
+  <ConnectionKey>Config.ConnectionKeys.AutoTicket</ConnectionKey>
+  <DataObjectNameSpace>AutoTicketLibrary.DataObject</DataObjectNameSpace>
+  <BusinessObjectNameSpace>AutoTicketLibrary.BusinessObject</BusinessObjectNameSpace>
+  <ConnectionString>Data Source=10.100.133.83;Initial Catalog=AutoTicket;Persist Security Info=True;User ID=sa;Password=gzuat;Connect Timeout=30</ConnectionString>
+  <UnInsertAndUnUpdate>CreateOn</UnInsertAndUnUpdate>
+  <UnInsert>UpdateOn,UpdateBy</UnInsert>
+  <UnUpdate>CreateBy</UnUpdate>
+  <DOPrefix>DO_</DOPrefix>
+  <UOPrefix>UO_</UOPrefix>
+  <UOListPrefix>UOList_</UOListPrefix>
+  <BOPrefix>BO_</BOPrefix>
+  <IsPassConnectionStringToBusiness>false</IsPassConnectionStringToBusiness>
+</Settings>

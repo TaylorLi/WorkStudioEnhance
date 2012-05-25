@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectName>HTISP</ProjectName>
+  <ConnectionKey>Config.ConnectionKeys.ISP</ConnectionKey>
+  <DataObjectNameSpace>HTISP.DAL.DataObject</DataObjectNameSpace>
+  <BusinessObjectNameSpace>HTISP.DAL.BusinessObject</BusinessObjectNameSpace>
+  <ConnectionString>data source=CRM;persist security info=True;user id=insurance;password=insurance;min pool size=4;max pool size=128</ConnectionString>
+  <UnInsertAndUnUpdate>CreateOn</UnInsertAndUnUpdate>
+  <UnInsert>UpdateOn,UpdateBy</UnInsert>
+  <UnUpdate>CreateBy</UnUpdate>
+  <DOPrefix>DO_</DOPrefix>
+  <UOPrefix>UO_</UOPrefix>
+  <UOListPrefix>UOList_</UOListPrefix>
+  <BOPrefix>BO_</BOPrefix>
+  <IsPassConnectionStringToBusiness>false</IsPassConnectionStringToBusiness>
+  <DecorateStyle>Pascal</DecorateStyle>
+</Settings>
