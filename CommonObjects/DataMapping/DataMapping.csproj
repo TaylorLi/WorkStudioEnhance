@@ -4,16 +4,31 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{110DB3FA-29D1-403F-B472-0676A70A8B8A}</ProjectGuid>
+    <ProjectGuid>{9EB017FA-B80B-4863-A550-9A548228B721}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OracleCodeBuilderLibrary</RootNamespace>
-    <AssemblyName>OracleCodeBuilderLibrary</AssemblyName>
+    <RootNamespace>DataMapping</RootNamespace>
+    <AssemblyName>DataMapping</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,43 +48,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonLibrary, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="Oracle.DataAccess, Version=2.111.7.20, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CommonDLL\Oracle.DataAccess.dll</HintPath>
+      <HintPath>..\..\Lib\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="OracleDataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessObjects\boColumns.cs" />
-    <Compile Include="BusinessObjects\boPks.cs" />
-    <Compile Include="BusinessObjects\boRemarks.cs" />
-    <Compile Include="BusinessObjects\boStoreProcedureParameters.cs" />
-    <Compile Include="BusinessObjects\boStoreProcedures.cs" />
-    <Compile Include="BusinessObjects\boTables.cs" />
-    <Compile Include="ColumnMapping.cs" />
+    <Compile Include="MappingAttribute.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="DataObjects\doColumns.cs" />
-    <Compile Include="DataObjects\doPKs.cs" />
-    <Compile Include="DataObjects\doRemarks.cs" />
-    <Compile Include="DataObjects\doStoreProcedureParameters.cs" />
-    <Compile Include="DataObjects\doStoreProcedures.cs" />
-    <Compile Include="DataObjects\doTables.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MappingInfoCache.cs" />
+    <Compile Include="PropertyMappingInfo.cs" />
+    <Compile Include="ObjectHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="SQL\CodeDataReader.cs" />
-    <Compile Include="SQL\CodeScript.cs" />
-    <Compile Include="SQL\CodeStoreProcedure.cs" />
-    <Compile Include="SQL\Util.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CommonObjects\DataMapping\DataMapping.csproj">
-      <Project>{9EB017FA-B80B-4863-A550-9A548228B721}</Project>
-      <Name>DataMapping</Name>
-    </ProjectReference>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

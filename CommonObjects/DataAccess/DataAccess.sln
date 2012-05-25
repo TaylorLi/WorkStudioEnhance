@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess.csproj", "{AB9DF9E4-32E1-42DA-BCF2-DD43B381166C}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkStudioLibrary", "..\..\WorkStudioLibrary\WorkStudioLibrary\WorkStudioLibrary.csproj", "{F766E9E9-E689-458E-B2B4-5F9AF11771E2}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB9DF9E4-32E1-42DA-BCF2-DD43B381166C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9DF9E4-32E1-42DA-BCF2-DD43B381166C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9DF9E4-32E1-42DA-BCF2-DD43B381166C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9DF9E4-32E1-42DA-BCF2-DD43B381166C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F766E9E9-E689-458E-B2B4-5F9AF11771E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F766E9E9-E689-458E-B2B4-5F9AF11771E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F766E9E9-E689-458E-B2B4-5F9AF11771E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F766E9E9-E689-458E-B2B4-5F9AF11771E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
